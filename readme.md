@@ -18,8 +18,6 @@ pip install numpy matplotlib vtk wandb
 - `Simulator/utils/`
   - `computing.py`: Irradiance maps, circular masks, centroid, power integration, detector edges, plotting helper.
   - `loss.py`: Losses based on irradiance MSE, power, and centroid error; combined loss helpers.
-  - `optimization.py`: Gradient-based optimization workflows (irradiance/power/centroid) and scanning-backed runs with early stopping.
-  - `scanning.py`: Single and dual-mirror sinusoidal scans to detect signal presence.
   - `helper.py`: Rotation matrices, mirror normals, reflection geometry, and position calculations.
   - `visualize.py`: Off-screen 3D rendering and replay of optimization trajectories with irradiance maps.
   - `logger.py`: CSV logger with optional Weights & Biases integration.
