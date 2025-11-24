@@ -21,7 +21,7 @@ pip install numpy matplotlib vtk wandb
   - `helper.py`: Rotation matrices, mirror normals, reflection geometry, and position calculations.
   - `visualize.py`: Off-screen 3D rendering and replay of optimization trajectories with irradiance maps.
   - `logger.py`: CSV logger with optional Weights & Biases integration.
-- Top-level notebooks and scripts (`test_v4.ipynb`, `visualize_test.ipynb`, etc.) show usage examples.
+- Top-level notebook show usage examples.
 
 ## Contact 
 If you have any question or there are any bugs, please contanct swllen25@gmail.com
