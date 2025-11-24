@@ -41,9 +41,9 @@ class OpticalSystem(Optic):
     def __init__(self,
                  beam_size: float = 0.5,
                  wavelength: float = 0.78,
-                 mirror_aperture: list = [5.0, 0.0],
+                 mirror_aperture: list = [12.7, 0.0],
                  pinhole_aperture: list = [0.5, 0.0],
-                 detector_aperture: list = [2.0, 2.0],
+                 detector_aperture: list = [25.0, 25.0],
                  mirror1_position: np.ndarray = np.array([0, 0, 100.0]),
                  mirror2_position: np.ndarray = np.array([0, -100.0, 100.0]),
                  rotation_angles_mirror1: np.ndarray = np.array([np.pi/2+np.pi/4, 0.0, 0.0]),  # [rx1, ry1, rz1]
@@ -55,9 +55,9 @@ class OpticalSystem(Optic):
         Construct an optical system consisting of two mirrors, two apertures,
         and two detectors, with configurable geometry and beam properties.
         ----------
-        mirror_aperture : list [r_max, r_min], default [5.0, 0.0] Radial aperture of the mirrors (outer and inner radius in mm).
+        mirror_aperture : list [r_max, r_min], default [12.7, 0.0] Radial aperture of the mirrors (outer and inner radius in mm).
         pinhole_aperture : list [r_max, r_min], default [0.5, 0.0] Radial aperture size of the pinhole/aperture (in mm).
-        detector_aperture : list [x_size, y_size], default [2.0, 2.0] Rectangular detector size along x and y directions (in mm).
+        detector_aperture : list [x_size, y_size], default [25.0, 25.0] Rectangular detector size along x and y directions (in mm).
         beam_size : float, default 1.0  Diameter of the incident beam (in mm).
         wavelength : float, default 0.78 Wavelength of the incoming light (in µm).
         mirror1_position : np.ndarray, default [0, 0, 100.0] Position of the first mirror in Cartesian coordinates [x, y, z].
@@ -317,3 +317,4 @@ class OpticalSystem(Optic):
             self.surface_group.surfaces[6].aperture.r_max=self.pinhole_max_size
 
             self.surface_group.surfaces[7].aperture.r_max=self.pinhole_max_size
+
